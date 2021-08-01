@@ -13,15 +13,15 @@ public class DragAndDrop {
 
     WebDriver driver = new ChromeDriver();
     driver.manage().window().maximize();
-         // driver.get("https://demoqa.com/droppable");
-        // WebElement element = driver.findElement(By.xpath("//div[@id='draggable']"));
-        //  WebElement dropArea = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div[2]"));
+          driver.get("https://demoqa.com/droppable");
+         WebElement element = driver.findElement(By.xpath("//div[@id='draggable']"));
+         WebElement dropArea = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div[2]"));
 
-        driver.get("http://demo.automationtesting.in/Static.html");
+       // driver.get("http://demo.automationtesting.in/Static.html");
 
-        WebElement element = driver.findElement(By.xpath("//img[@src='original.png' and @draggable='true']"));
+       // WebElement element = driver.findElement(By.xpath("//img[@src='original.png' and @draggable='true']"));
 
-        WebElement dropArea = driver.findElement(By.xpath("//div[@id='droparea']"));
+       //WebElement dropArea = driver.findElement(By.xpath("//div[@id='droparea']"));
         Actions act = new Actions(driver);
         Thread.sleep(3000);
         act.dragAndDrop(element,dropArea).build().perform();
